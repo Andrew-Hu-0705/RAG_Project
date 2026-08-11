@@ -1,0 +1,268 @@
+{
+  "corpus_size_papers": 28,
+  "eval_set_size": 33,
+  "eval_set_answerable": 28,
+  "eval_set_unanswerable": 5,
+  "retrieval": {
+    "rerank": {
+      "1": {
+        "precision": 0.536,
+        "recall": 0.536
+      },
+      "3": {
+        "precision": 0.25,
+        "recall": 0.75
+      },
+      "5": {
+        "precision": 0.157,
+        "recall": 0.786
+      }
+    },
+    "no_rerank": {
+      "1": {
+        "precision": 0.321,
+        "recall": 0.321
+      },
+      "3": {
+        "precision": 0.19,
+        "recall": 0.571
+      },
+      "5": {
+        "precision": 0.136,
+        "recall": 0.679
+      }
+    }
+  },
+  "answer_quality": {
+    "rag": {
+      "correct_rate": 0.893,
+      "correct_or_partial_rate": 1.0
+    },
+    "baseline": {
+      "correct_rate": 0.679,
+      "correct_or_partial_rate": 1.0
+    },
+    "examples": [
+      {
+        "id": "q001",
+        "question": "In REALM's retrieval gradient, what determines whether a document's retrieval score is pushed up or down, and how is the baseline for that comparison defined?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q002",
+        "question": "In the DPR paper's main retrieval results on Natural Questions, how many training examples are needed before the dense retriever beats BM25, and how large is the top-20 accuracy gap when the full training set is used?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q003",
+        "question": "In the RAG-Token document posterior analysis for the Jeopardy question generation with input \"Hemingway\", how does the retrieved-document attention shift across the generated tokens?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q004",
+        "question": "In the Fusion-in-Decoder architecture, how exactly are retrieved passages fed to the encoder versus the decoder, and what formatting is applied to each passage?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q005",
+        "question": "In the WebGPT paper, what specific advantages do the authors claim for using model-collected references as the basis for human evaluation of factual accuracy, and who do they credit with the idea?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q006",
+        "question": "What four properties do the authors claim make chain-of-thought prompting attractive, and what caveats do they attach to them?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q007",
+        "question": "In the MRKL paper's Experiment 1 on arithmetic word problems, how was Jurassic-X trained versus GPT-3 evaluated, and what does the paper attribute any remaining errors to?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q008",
+        "question": "In this paper's comparison, how does self-ask differ operationally from least-to-most prompting, and what performance/efficiency trade-off do the authors report?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q009",
+        "question": "In the ReAct paper's error analysis on HotpotQA, what specific failure modes distinguish ReAct from CoT, and what are the reported rates?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q010",
+        "question": "In the TREC DL19/DL20 web search results, how does HyDE compare numerically to unsupervised BM25 and plain Contriever, and how does it stack up against the supervised ContrieverFT baseline?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q011",
+        "question": "In the Toolformer MLQA multilingual evaluation, how often is the machine translation tool actually invoked across languages, and why does the paper say Toolformer fails to consistently beat GPT-J on this benchmark?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q012",
+        "question": "In the Reflexion paper's ALFWorld analysis, what learning-curve behavior distinguishes the Reflexion agent from the ReAct-only agent, and what two failure cases does the reflection address?",
+        "rag_verdict": "partial",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q013",
+        "question": "In the HuggingGPT human-annotated task-planning evaluation (Table 6), how do Alpaca-7b, Vicuna-7b, GPT-3.5, and GPT-4 compare on sequential-task accuracy/edit distance and graph-task accuracy/F1, and what conclusion do the authors draw about GPT-4 versus human annotations?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q014",
+        "question": "In the Generative Agents architecture, how does the reflection mechanism produce a tree structure, and what distinguishes leaf from non-leaf nodes?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q015",
+        "question": "In the GSM8K error analysis of 100 examples, how do Zero-shot-CoT, Zero-shot-PS, and Zero-shot-PS+ compare in number of incorrect answers and in the breakdown of calculation, missing-step, and semantic errors?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q016",
+        "question": "In the FLARE ablations, how does varying the confidence threshold \u03b8 (i.e., the fraction of sentences triggering retrieval) affect performance differently on 2WikiMultihopQA versus StrategyQA?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q017",
+        "question": "In the Tree of Thoughts Game of 24 experiments, how were the test games selected from 4nums.com, and what exactly counts as a success in the reported metric?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q018",
+        "question": "In the Bing-based retrieval setup for this query rewriting pipeline, what are the two ways retrieved content is turned into documents, and how is document length controlled in the second one?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q019",
+        "question": "In the Gorilla evaluation table, what happens to Gorilla's HuggingFace accuracy when a BM-25 retriever is added at test time compared to the zero-shot setting, and how does that compare with GPT-3.5?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q020",
+        "question": "In VOYAGER's iterative prompting mechanism, what specific signals are fed back into GPT-4 for the next round of code refinement, and how does the authors' self-verification differ from prior self-reflection approaches?",
+        "rag_verdict": "partial",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q021",
+        "question": "In the MT-bench category-wise win rate table, which category shows the largest gap between GPT-4 and Vicuna-13B, and how do reasoning and math win rates compare across GPT-4, GPT-3.5, and Vicuna-13B?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q022",
+        "question": "In the key-value retrieval experiments, how does LongChat-13B (16K) deviate from the other models tested, and what qualitative behavior did the authors observe?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q023",
+        "question": "In the survey's comparison table of LLM-based agents, how are the symbols \u2460 and \u2461 interpreted in the 'capability acquisition' (CA) column and what does '-' mean \u2014 and according to that coding, do GITM and Voyager (both 05/2023) acquire capabilities with or without fine-tuning?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q024",
+        "question": "In Ragas, how is the answer relevance score computed, and what aspects of answer quality does it deliberately ignore versus penalise?",
+        "rag_verdict": "partial",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q025",
+        "question": "In Self-RAG, how does varying the adaptive retrieval threshold \u03b4 affect retrieval frequency and task accuracy, and why do PopQA and PubHealth behave differently?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q026",
+        "question": "In the ARES paper, how does the framework's ranking accuracy compare to a sampled-annotation baseline, and what annotation budget does each require?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "partial"
+      },
+      {
+        "id": "q027",
+        "question": "In this RAG survey's taxonomy of retrieval augmentation processes, how do iterative, recursive, and adaptive retrieval differ, and what drawbacks are noted for iterative retrieval?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      },
+      {
+        "id": "q028",
+        "question": "In the CRAG paper's experimental setup, which four datasets were used and what evaluation metric was applied to each?",
+        "rag_verdict": "correct",
+        "baseline_verdict": "correct"
+      }
+    ]
+  },
+  "abstention": {
+    "retrieval_gate_abstention_rate": 0.2,
+    "rag_final_answer_abstention_rate": 1.0,
+    "baseline_final_answer_abstention_rate": 0.2,
+    "examples": [
+      {
+        "id": "u001",
+        "question": "What chunk overlap percentage does the RAG survey paper recommend for legal contracts?",
+        "retrieval_gate_abstained": true,
+        "rag_final_answer_abstained": true,
+        "baseline_final_answer_abstained": true,
+        "rag_answer": "I don't have relevant information in the corpus to answer this question confidently.",
+        "baseline_answer_preview": "I don't think I can point you to that recommendation \u2014 and I'd be cautious about the premise.\n\nThe major RAG surveys I'm aware of (e.g., Gao et al., *\"Retrieval-Augmented Generation for Large Language"
+      },
+      {
+        "id": "u002",
+        "question": "How does the Segment Anything Model (SAM) perform on medical image segmentation benchmarks?",
+        "retrieval_gate_abstained": false,
+        "rag_final_answer_abstained": true,
+        "baseline_final_answer_abstained": false,
+        "rag_answer": "The provided excerpts do not contain any information about the Segment Anything Model (SAM) or about medical image segmentation benchmarks, so I cannot answer this question from them.\n\nThe closest related content is unrelated to SAM or medicine:\n\n- HuggingGPT's example describes invoking `facebook/detr-resnet-50-panoptic` for an image segmentation request on a natural image, where the model identified classes such as \"dog\", \"grass\" and \"tree\" \u2014 but this is a demonstration of task delegation, not a benchmark evaluation of SAM [1].\n- Gorilla's ablation discusses respecting accuracy constraints when selecting vision models (e.g., ResNeXt-101 32x16d at 84.2% top-1 vs. MobileNetV2 at 71.88% on ImageNet), which concerns image classification API selection rather than segmentation performance [4].\n- A RAG survey mentions multimodal image-related models such as RA-CM3 and BLIP-2, again with no reference to SAM or medical segmentation [5].\n\nTo answer your question, you would need excerpts from sources that directly evaluate SAM on medical imaging datasets.",
+        "baseline_answer_preview": "## Short answer\n\nOut of the box, SAM's zero-shot performance on medical images is **highly variable and generally below task-specific supervised models**. It can be competitive on large, high-contrast"
+      },
+      {
+        "id": "u003",
+        "question": "What was the reported carbon footprint of training GPT-3, according to the papers in this corpus?",
+        "retrieval_gate_abstained": false,
+        "rag_final_answer_abstained": true,
+        "baseline_final_answer_abstained": false,
+        "rag_answer": "The provided excerpts do not contain any information about the carbon footprint (or energy/emissions cost) of training GPT-3.\n\nThe excerpts mention GPT-3 only in other contexts: its accuracy on 2-hop compositional questions and the \"compositionality gap\" across model sizes [1, 4], and reproducibility of GPT-3 results plus a note that compute totals were *not* estimated in that work [2]. The remaining excerpts concern reference lists [3] and GPT-4-based data collection for Self-RAG [5]. None report carbon footprint figures, so I cannot answer this question from the given material.",
+        "baseline_answer_preview": "I don't have any corpus, document set, or attached papers available in this conversation \u2014 so I can't tell you what \"the papers in this corpus\" report. If you upload or paste the papers (or tell me wh"
+      },
+      {
+        "id": "u004",
+        "question": "What programming language is Toolformer's tool-calling API implemented in?",
+        "retrieval_gate_abstained": false,
+        "rag_final_answer_abstained": true,
+        "baseline_final_answer_abstained": false,
+        "rag_answer": "The excerpts do not contain this information. They describe *how* Toolformer represents tool calls \u2014 as text, using a tuple $c = (a_c, i_c)$ of API name and input, linearized with special tokens `<API>`, `</API>`, and `\u2192`, inserted directly into text sequences, with the requirement that each API's inputs and outputs be representable as text [5]. They also list the tools incorporated (calculator, Q&A system, search engine, translation system, calendar) [3], and note that Toolformer is fine-tuned on sampled API calls filtered by whether they reduce perplexity on future tokens [1].\n\nHowever, nothing in these excerpts states the programming language or implementation stack used for the API calls themselves. (One excerpt mentions Python interpreters as a tool used in the broader literature on LLM tool use, but attributes that to other work, not to Toolformer [2].) You would need the paper's implementation details or released code to answer this.",
+        "baseline_answer_preview": "Toolformer doesn't really have a \"tool-calling API\" in the software-library sense, so the question rests on a slightly mistaken premise worth unpacking.\n\n**What Toolformer actually is:** It's a resear"
+      },
+      {
+        "id": "u005",
+        "question": "What GPU cluster configuration was used to train the underlying model behind Reflexion?",
+        "retrieval_gate_abstained": false,
+        "rag_final_answer_abstained": true,
+        "baseline_final_answer_abstained": false,
+        "rag_answer": "The provided excerpts do not contain this information. Reflexion is described as a framework that reinforces language agents **without updating weights** \u2014 instead using verbal/linguistic feedback stored in an episodic memory buffer [1] \u2014 so no training of the underlying model is described. The excerpts indicate Reflexion is built on top of existing LLMs (e.g., GPT-4, whose pre-training cutoff date of October 8, 2022 is mentioned in constructing the LeetcodeHardGym benchmark) [4], and the Actor/Evaluator/Self-Reflection components are prompted LLMs rather than trained models [5].\n\nThe only mention of GPU-cluster training in the excerpts is an unrelated bibliography entry (\"Efficient large-scale language model training on GPU clusters using megatron-lm\") appearing in the reference list of a different paper, Corrective Retrieval Augmented Generation [2] \u2014 it says nothing about Reflexion's model.",
+        "baseline_answer_preview": "Reflexion doesn't have a \"trained model\" behind it in the sense your question implies \u2014 so there's no GPU cluster configuration to report.\n\n**Why:** Reflexion (Shinn et al., 2023, *\"Reflexion: Languag"
+      }
+    ]
+  }
+}

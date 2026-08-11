@@ -1,0 +1,384 @@
+{
+  "2005.11401": {
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "authors": [
+      "Patrick Lewis",
+      "Ethan Perez",
+      "Aleksandra Piktus",
+      "Fabio Petroni",
+      "Vladimir Karpukhin",
+      "Naman Goyal",
+      "Heinrich K\u00fcttler",
+      "Mike Lewis",
+      "Wen-tau Yih",
+      "Tim Rockt\u00e4schel",
+      "Sebastian Riedel",
+      "Douwe Kiela"
+    ],
+    "url": "http://arxiv.org/abs/2005.11401v4"
+  },
+  "2004.04906": {
+    "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+    "authors": [
+      "Vladimir Karpukhin",
+      "Barlas O\u011fuz",
+      "Sewon Min",
+      "Patrick Lewis",
+      "Ledell Wu",
+      "Sergey Edunov",
+      "Danqi Chen",
+      "Wen-tau Yih"
+    ],
+    "url": "http://arxiv.org/abs/2004.04906v3"
+  },
+  "2002.08909": {
+    "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+    "authors": [
+      "Kelvin Guu",
+      "Kenton Lee",
+      "Zora Tung",
+      "Panupong Pasupat",
+      "Ming-Wei Chang"
+    ],
+    "url": "http://arxiv.org/abs/2002.08909v1"
+  },
+  "2007.01282": {
+    "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+    "authors": [
+      "Gautier Izacard",
+      "Edouard Grave"
+    ],
+    "url": "http://arxiv.org/abs/2007.01282v2"
+  },
+  "2212.10496": {
+    "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+    "authors": [
+      "Luyu Gao",
+      "Xueguang Ma",
+      "Jimmy Lin",
+      "Jamie Callan"
+    ],
+    "url": "http://arxiv.org/abs/2212.10496v1"
+  },
+  "2310.11511": {
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "authors": [
+      "Akari Asai",
+      "Zeqiu Wu",
+      "Yizhong Wang",
+      "Avirup Sil",
+      "Hannaneh Hajishirzi"
+    ],
+    "url": "http://arxiv.org/abs/2310.11511v1"
+  },
+  "2401.15884": {
+    "title": "Corrective Retrieval Augmented Generation",
+    "authors": [
+      "Shi-Qi Yan",
+      "Jia-Chen Gu",
+      "Yun Zhu",
+      "Zhen-Hua Ling"
+    ],
+    "url": "http://arxiv.org/abs/2401.15884v3"
+  },
+  "2305.06983": {
+    "title": "Active Retrieval Augmented Generation",
+    "authors": [
+      "Zhengbao Jiang",
+      "Frank F. Xu",
+      "Luyu Gao",
+      "Zhiqing Sun",
+      "Qian Liu",
+      "Jane Dwivedi-Yu",
+      "Yiming Yang",
+      "Jamie Callan",
+      "Graham Neubig"
+    ],
+    "url": "http://arxiv.org/abs/2305.06983v2"
+  },
+  "2307.03172": {
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "authors": [
+      "Nelson F. Liu",
+      "Kevin Lin",
+      "John Hewitt",
+      "Ashwin Paranjape",
+      "Michele Bevilacqua",
+      "Fabio Petroni",
+      "Percy Liang"
+    ],
+    "url": "http://arxiv.org/abs/2307.03172v3"
+  },
+  "2312.10997": {
+    "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "authors": [
+      "Yunfan Gao",
+      "Yun Xiong",
+      "Xinyu Gao",
+      "Kangxiang Jia",
+      "Jinliu Pan",
+      "Yuxi Bi",
+      "Yi Dai",
+      "Jiawei Sun",
+      "Meng Wang",
+      "Haofen Wang"
+    ],
+    "url": "http://arxiv.org/abs/2312.10997v5"
+  },
+  "2210.03629": {
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "authors": [
+      "Shunyu Yao",
+      "Jeffrey Zhao",
+      "Dian Yu",
+      "Nan Du",
+      "Izhak Shafran",
+      "Karthik Narasimhan",
+      "Yuan Cao"
+    ],
+    "url": "http://arxiv.org/abs/2210.03629v3"
+  },
+  "2302.04761": {
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "authors": [
+      "Timo Schick",
+      "Jane Dwivedi-Yu",
+      "Roberto Dess\u00ec",
+      "Roberta Raileanu",
+      "Maria Lomeli",
+      "Luke Zettlemoyer",
+      "Nicola Cancedda",
+      "Thomas Scialom"
+    ],
+    "url": "http://arxiv.org/abs/2302.04761v1"
+  },
+  "2303.11366": {
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "authors": [
+      "Noah Shinn",
+      "Federico Cassano",
+      "Edward Berman",
+      "Ashwin Gopinath",
+      "Karthik Narasimhan",
+      "Shunyu Yao"
+    ],
+    "url": "http://arxiv.org/abs/2303.11366v4"
+  },
+  "2205.00445": {
+    "title": "MRKL Systems: A modular, neuro-symbolic architecture that combines large language models, external knowledge sources and discrete reasoning",
+    "authors": [
+      "Ehud Karpas",
+      "Omri Abend",
+      "Yonatan Belinkov",
+      "Barak Lenz",
+      "Opher Lieber",
+      "Nir Ratner",
+      "Yoav Shoham",
+      "Hofit Bata",
+      "Yoav Levine",
+      "Kevin Leyton-Brown",
+      "Dor Muhlgay",
+      "Noam Rozen",
+      "Erez Schwartz",
+      "Gal Shachaf",
+      "Shai Shalev-Shwartz",
+      "Amnon Shashua",
+      "Moshe Tenenholtz"
+    ],
+    "url": "http://arxiv.org/abs/2205.00445v1"
+  },
+  "2210.03350": {
+    "title": "Measuring and Narrowing the Compositionality Gap in Language Models",
+    "authors": [
+      "Ofir Press",
+      "Muru Zhang",
+      "Sewon Min",
+      "Ludwig Schmidt",
+      "Noah A. Smith",
+      "Mike Lewis"
+    ],
+    "url": "http://arxiv.org/abs/2210.03350v3"
+  },
+  "2304.03442": {
+    "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+    "authors": [
+      "Joon Sung Park",
+      "Joseph C. O'Brien",
+      "Carrie J. Cai",
+      "Meredith Ringel Morris",
+      "Percy Liang",
+      "Michael S. Bernstein"
+    ],
+    "url": "http://arxiv.org/abs/2304.03442v2"
+  },
+  "2305.16291": {
+    "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+    "authors": [
+      "Guanzhi Wang",
+      "Yuqi Xie",
+      "Yunfan Jiang",
+      "Ajay Mandlekar",
+      "Chaowei Xiao",
+      "Yuke Zhu",
+      "Linxi Fan",
+      "Anima Anandkumar"
+    ],
+    "url": "http://arxiv.org/abs/2305.16291v2"
+  },
+  "2303.17580": {
+    "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+    "authors": [
+      "Yongliang Shen",
+      "Kaitao Song",
+      "Xu Tan",
+      "Dongsheng Li",
+      "Weiming Lu",
+      "Yueting Zhuang"
+    ],
+    "url": "http://arxiv.org/abs/2303.17580v4"
+  },
+  "2305.15334": {
+    "title": "Gorilla: Large Language Model Connected with Massive APIs",
+    "authors": [
+      "Shishir G. Patil",
+      "Tianjun Zhang",
+      "Xin Wang",
+      "Joseph E. Gonzalez"
+    ],
+    "url": "http://arxiv.org/abs/2305.15334v1"
+  },
+  "2308.11432": {
+    "title": "A Survey on Large Language Model based Autonomous Agents",
+    "authors": [
+      "Lei Wang",
+      "Chen Ma",
+      "Xueyang Feng",
+      "Zeyu Zhang",
+      "Hao Yang",
+      "Jingsen Zhang",
+      "Zhiyuan Chen",
+      "Jiakai Tang",
+      "Xu Chen",
+      "Yankai Lin",
+      "Wayne Xin Zhao",
+      "Zhewei Wei",
+      "Ji-Rong Wen"
+    ],
+    "url": "http://arxiv.org/abs/2308.11432v7"
+  },
+  "2201.11903": {
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "authors": [
+      "Jason Wei",
+      "Xuezhi Wang",
+      "Dale Schuurmans",
+      "Maarten Bosma",
+      "Brian Ichter",
+      "Fei Xia",
+      "Ed Chi",
+      "Quoc Le",
+      "Denny Zhou"
+    ],
+    "url": "http://arxiv.org/abs/2201.11903v6"
+  },
+  "2305.10601": {
+    "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+    "authors": [
+      "Shunyu Yao",
+      "Dian Yu",
+      "Jeffrey Zhao",
+      "Izhak Shafran",
+      "Thomas L. Griffiths",
+      "Yuan Cao",
+      "Karthik Narasimhan"
+    ],
+    "url": "http://arxiv.org/abs/2305.10601v2"
+  },
+  "2112.09332": {
+    "title": "WebGPT: Browser-assisted question-answering with human feedback",
+    "authors": [
+      "Reiichiro Nakano",
+      "Jacob Hilton",
+      "Suchir Balaji",
+      "Jeff Wu",
+      "Long Ouyang",
+      "Christina Kim",
+      "Christopher Hesse",
+      "Shantanu Jain",
+      "Vineet Kosaraju",
+      "William Saunders",
+      "Xu Jiang",
+      "Karl Cobbe",
+      "Tyna Eloundou",
+      "Gretchen Krueger",
+      "Kevin Button",
+      "Matthew Knight",
+      "Benjamin Chess",
+      "John Schulman"
+    ],
+    "url": "http://arxiv.org/abs/2112.09332v3"
+  },
+  "2305.04091": {
+    "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models",
+    "authors": [
+      "Lei Wang",
+      "Wanyu Xu",
+      "Yihuai Lan",
+      "Zhiqiang Hu",
+      "Yunshi Lan",
+      "Roy Ka-Wei Lee",
+      "Ee-Peng Lim"
+    ],
+    "url": "http://arxiv.org/abs/2305.04091v3"
+  },
+  "2309.15217": {
+    "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+    "authors": [
+      "Shahul Es",
+      "Jithin James",
+      "Luis Espinosa-Anke",
+      "Steven Schockaert"
+    ],
+    "url": "http://arxiv.org/abs/2309.15217v2"
+  },
+  "2311.09476": {
+    "title": "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+    "authors": [
+      "Jon Saad-Falcon",
+      "Omar Khattab",
+      "Christopher Potts",
+      "Matei Zaharia"
+    ],
+    "url": "http://arxiv.org/abs/2311.09476v2"
+  },
+  "2306.05685": {
+    "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+    "authors": [
+      "Lianmin Zheng",
+      "Wei-Lin Chiang",
+      "Ying Sheng",
+      "Siyuan Zhuang",
+      "Zhanghao Wu",
+      "Yonghao Zhuang",
+      "Zi Lin",
+      "Zhuohan Li",
+      "Dacheng Li",
+      "Eric P. Xing",
+      "Hao Zhang",
+      "Joseph E. Gonzalez",
+      "Ion Stoica"
+    ],
+    "url": "http://arxiv.org/abs/2306.05685v4"
+  },
+  "2305.14283": {
+    "title": "Query Rewriting for Retrieval-Augmented Large Language Models",
+    "authors": [
+      "Xinbei Ma",
+      "Yeyun Gong",
+      "Pengcheng He",
+      "Hai Zhao",
+      "Nan Duan"
+    ],
+    "url": "http://arxiv.org/abs/2305.14283v3"
+  }
+}

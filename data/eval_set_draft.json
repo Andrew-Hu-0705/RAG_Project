@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q001",
+    "question": "In REALM's retrieval gradient, what determines whether a document's retrieval score is pushed up or down, and how is the baseline for that comparison defined?",
+    "reference_answer": "The gradient changes f(x,z) by a multiplier r(z), which is positive if and only if p(y|z,x) > p(y|x). Here p(y|z,x) is the probability of predicting the correct output y given document z, and p(y|x) is the expected value of p(y|x,z) when documents are sampled from p(z|x). So a document's score is increased only when it helps predict y better than the expected (average) retrieved document, and decreased otherwise.",
+    "gold_chunk_ids": [
+      "2002.08909_13"
+    ],
+    "source_paper": "REALM: Retrieval-Augmented Language Model Pre-Training",
+    "answerable": true
+  },
+  {
+    "id": "q002",
+    "question": "In the DPR paper's main retrieval results on Natural Questions, how many training examples are needed before the dense retriever beats BM25, and how large is the top-20 accuracy gap when the full training set is used?",
+    "reference_answer": "According to Figure 1 (measured on the Natural Questions development set), DPR trained with only 1,000 examples already outperforms BM25 in top-k retrieval accuracy. With the full training data, the gap is especially large at small k: DPR reaches 78.4% top-20 accuracy versus 59.1% for BM25. BM25 was tuned with b=0.4 and k1=0.9 on development sets, so this is not an untuned baseline.",
+    "gold_chunk_ids": [
+      "2004.04906_15"
+    ],
+    "source_paper": "Dense Passage Retrieval for Open-Domain Question Answering",
+    "answerable": true
+  },
+  {
+    "id": "q003",
+    "question": "In the RAG-Token document posterior analysis for the Jeopardy question generation with input \"Hemingway\", how does the retrieved-document attention shift across the generated tokens?",
+    "reference_answer": "Figure 2 shows the per-token document posterior p(z_i|x,y_i,y_-i) over 5 retrieved documents. The posterior for document 1 is high while the model generates \"A Farewell to Arms\", and it shifts to document 2 when generating \"The Sun Also Rises\" \u2014 document 2 being the passage mentioning the 1920s \"Lost Generation\" expatriate community and that his debut novel \"The Sun Also Rises\" was published in 1926. This illustrates that RAG-Token can draw on different documents for different parts of a single generated output.",
+    "gold_chunk_ids": [
+      "2005.11401_18"
+    ],
+    "source_paper": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "answerable": true
+  },
+  {
+    "id": "q004",
+    "question": "In the Fusion-in-Decoder architecture, how exactly are retrieved passages fed to the encoder versus the decoder, and what formatting is applied to each passage?",
+    "reference_answer": "Each retrieved passage is concatenated with its title and the question, and encoded independently of the other passages by the encoder. Special tokens 'question:', 'title:' and 'context:' are prepended to the question, the passage title, and the passage text respectively. The decoder then attends over the concatenation of all resulting passage representations, so evidence fusion happens only in the decoder \u2014 hence the name Fusion-in-Decoder.",
+    "gold_chunk_ids": [
+      "2007.01282_6"
+    ],
+    "source_paper": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+    "answerable": true
+  },
+  {
+    "id": "q005",
+    "question": "In the WebGPT paper, what specific advantages do the authors claim for using model-collected references as the basis for human evaluation of factual accuracy, and who do they credit with the idea?",
+    "reference_answer": "The authors credit Metzler et al. [2021] with previously suggesting this approach. They argue it gives more accurate feedback, since evaluating whether a claim is supported by a set of sources is much easier than judging the factual accuracy of arbitrary claims that may be technical, subjective or vague. It also gives less noisy feedback, because an unambiguous procedure for judging support by sources can be specified, raising inter-labeler agreement and thus data efficiency. A third stated benefit is transparency.",
+    "gold_chunk_ids": [
+      "2112.09332_22"
+    ],
+    "source_paper": "WebGPT: Browser-assisted question-answering with human feedback",
+    "answerable": true
+  },
+  {
+    "id": "q006",
+    "question": "What four properties do the authors claim make chain-of-thought prompting attractive, and what caveats do they attach to them?",
+    "reference_answer": "The authors list four: (1) it decomposes multi-step problems into intermediate steps, letting the model allocate more computation to problems needing more reasoning steps; (2) it gives an interpretable window into the model's behavior, showing how it may have reached an answer and allowing debugging of faulty reasoning paths; (3) it applies to tasks like math word problems, commonsense reasoning, and symbolic manipulation, and in principle to any task humans can solve via language; and (4) it can be elicited in sufficiently large off-the-shelf LMs simply by including chain-of-thought sequences in few-shot exemplars. Caveats noted: fully characterizing the computations supporting an answer remains an open question, applicability is only 'in principle,' and the elicitation requires sufficiently large models.",
+    "gold_chunk_ids": [
+      "2201.11903_5"
+    ],
+    "source_paper": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "answerable": true
+  },
+  {
+    "id": "q007",
+    "question": "In the MRKL paper's Experiment 1 on arithmetic word problems, how was Jurassic-X trained versus GPT-3 evaluated, and what does the paper attribute any remaining errors to?",
+    "reference_answer": "Jurassic-X was trained only on single-digit operands (simple problems with digits only, one format, and a single operation \u2014 either addition or multiplication) and then tested on numbers with 1 to 9 digits, generalizing successfully across all digit counts. In contrast, GPT-3 was conditioned on examples having the same number of digits as the problem it was answering. Since the actual computation is performed by the external calculator module, all of Jurassic-X's errors stem from passing the wrong operations or operands to the calculator.",
+    "gold_chunk_ids": [
+      "2205.00445_10"
+    ],
+    "source_paper": "MRKL Systems: A modular, neuro-symbolic architecture that combines large language models, external knowledge sources and discrete reasoning",
+    "answerable": true
+  },
+  {
+    "id": "q008",
+    "question": "In this paper's comparison, how does self-ask differ operationally from least-to-most prompting, and what performance/efficiency trade-off do the authors report?",
+    "reference_answer": "Least-to-most also decomposes compositional questions, but it requires multiple forward passes with different prompts. Self-ask instead decomposes the input question and answers the sub-questions within a single forward pass using one prompt. The authors report (Table 2) that self-ask achieves similar or better performance than least-to-most while running more than 30% faster.",
+    "gold_chunk_ids": [
+      "2210.03350_21"
+    ],
+    "source_paper": "Measuring and Narrowing the Compositionality Gap in Language Models",
+    "answerable": true
+  },
+  {
+    "id": "q009",
+    "question": "In the ReAct paper's error analysis on HotpotQA, what specific failure modes distinguish ReAct from CoT, and what are the reported rates?",
+    "reference_answer": "Hallucination is the dominant failure mode for CoT, accounting for 56% of its failures and yielding a 14% false positive rate in success mode versus 6% for ReAct, since ReAct is grounded in an external knowledge base. ReAct instead suffers from a higher reasoning error rate, partly because the interleaved thought/action/observation structure constrains flexibility and the model can get stuck repetitively regenerating prior thoughts and actions. Additionally, non-informative search results account for 23% of ReAct's error cases, derailing its reasoning and making recovery difficult.",
+    "gold_chunk_ids": [
+      "2210.03629_15"
+    ],
+    "source_paper": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "answerable": true
+  },
+  {
+    "id": "q010",
+    "question": "In the TREC DL19/DL20 web search results, how does HyDE compare numerically to unsupervised BM25 and plain Contriever, and how does it stack up against the supervised ContrieverFT baseline?",
+    "reference_answer": "Among methods using no relevance judgements, HyDE substantially beats both BM25 and plain Contriever: on DL19 it reaches 41.8 MAP / 61.3 nDCG@10 / 88.0 recall@1k versus BM25's 30.1 / 50.6 / 75.0 and Contriever's 24.0 / 44.5 / 74.6; on DL20 it gets 38.2 / 57.9 / 84.4 versus BM25's 28.6 / 48.0 / 78.6 and Contriever's 24.0 / 42.1 / 75.4. Against the fine-tuned ContrieverFT (41.7 MAP / 62.1 nDCG@10 / 83.6 recall@1k on DL19; 43.6 / 63.2 / 85.8 on DL20), HyDE is roughly comparable on DL19 (slightly higher recall@1k, slightly lower nDCG@10) but falls behind on DL20. Note the excerpt treats ContrieverFT/mContrieverFT as empirical upper bounds since they use retrieval-specific pre-training plus several rounds of fine-tuning.",
+    "gold_chunk_ids": [
+      "2212.10496_13"
+    ],
+    "source_paper": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+    "answerable": true
+  },
+  {
+    "id": "q011",
+    "question": "In the Toolformer MLQA multilingual evaluation, how often is the machine translation tool actually invoked across languages, and why does the paper say Toolformer fails to consistently beat GPT-J on this benchmark?",
+    "reference_answer": "The MT tool is used for 63.8% to 94.9% of examples depending on the language, with Hindi as the striking exception at only 7.3%. Although translating the question with the MT tool helps across all languages, the additional pretraining on CCNet used for Toolformer degrades MLQA performance (e.g., GPT-J + CC drops versus plain GPT-J on German, Chinese and Arabic). As a result, Toolformer does not consistently outperform GPT-J \u2014 it wins on Spanish (20.6 vs 15.2) and Vietnamese (10.6 vs 8.2) but loses on German (13.5 vs 16.5), Chinese (16.8 vs 18.2) and Arabic (3.7 vs 8.2).",
+    "gold_chunk_ids": [
+      "2302.04761_20"
+    ],
+    "source_paper": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "answerable": true
+  },
+  {
+    "id": "q012",
+    "question": "In the Reflexion paper's ALFWorld analysis, what learning-curve behavior distinguishes the Reflexion agent from the ReAct-only agent, and what two failure cases does the reflection address?",
+    "reference_answer": "The Reflexion agent shows an immediate spike in improvement between the first two trials followed by a steady increase over the next 11 trials to near-perfect performance, indicating learning accumulates over several experiences. The ReAct-only agent instead converges at a hallucination rate of 22% with no signs of long-term recovery. The two failure cases handled are: (1) inefficient planning, where the agent can suggest a new action choice or a new long-term plan, and (2) too many surfaces/containers to check for an item, where the agent exploits its experience memory across trials to search a room thoroughly.",
+    "gold_chunk_ids": [
+      "2303.11366_15"
+    ],
+    "source_paper": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "answerable": true
+  },
+  {
+    "id": "q013",
+    "question": "In the HuggingGPT human-annotated task-planning evaluation (Table 6), how do Alpaca-7b, Vicuna-7b, GPT-3.5, and GPT-4 compare on sequential-task accuracy/edit distance and graph-task accuracy/F1, and what conclusion do the authors draw about GPT-4 versus human annotations?",
+    "reference_answer": "On the human-annotated dataset, sequential task accuracy rises from 0 (Alpaca-7b) to 7.45 (Vicuna-7b), 18.18 (GPT-3.5) and 41.36 (GPT-4), while edit distance drops from 0.96 to 0.89, 0.76 and 0.61 respectively. For graph tasks, accuracy/F1 go from 4.17/4.17 (Alpaca-7b) to 10.12/7.84 (Vicuna-7b), 20.83/16.45 (GPT-3.5) and 58.33/49.28 (GPT-4). The authors conclude that more powerful LLMs plan better, but even GPT-4 still falls substantially short of human annotations, underscoring the need to improve LLM planning capability as a controller.",
+    "gold_chunk_ids": [
+      "2303.17580_23"
+    ],
+    "source_paper": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+    "answerable": true
+  },
+  {
+    "id": "q014",
+    "question": "In the Generative Agents architecture, how does the reflection mechanism produce a tree structure, and what distinguishes leaf from non-leaf nodes?",
+    "reference_answer": "Reflections are generated by prompting the model with recent statements about an agent and asking for high-level insights, each citing the memory objects it was derived from (e.g., \"Klaus Mueller is dedicated to his research on gentrification (because of 1, 2, 8, 15)\"). Because reflections can take other reflections as inputs, not just observations, they form trees: leaf nodes are the base observations from the environment, while non-leaf nodes are reflections that become increasingly abstract and higher-level the further up the tree they sit.",
+    "gold_chunk_ids": [
+      "2304.03442_29"
+    ],
+    "source_paper": "Generative Agents: Interactive Simulacra of Human Behavior",
+    "answerable": true
+  },
+  {
+    "id": "q015",
+    "question": "In the GSM8K error analysis of 100 examples, how do Zero-shot-CoT, Zero-shot-PS, and Zero-shot-PS+ compare in number of incorrect answers and in the breakdown of calculation, missing-step, and semantic errors?",
+    "reference_answer": "Out of 100 GSM8K problems, Zero-Shot-CoT got 46 wrong, Zero-shot-PS 43, and Zero-shot-PS+ 39. Error breakdowns were: Zero-shot-CoT 7% calculation, 12% missing-step, 27% semantic; Zero-shot-PS 7% / 10% / 26%; Zero-shot-PS+ 5% / 7% / 27%. Thus PS+ had the fewest calculation and missing-step errors while semantic understanding errors remained comparable to Zero-shot-CoT, suggesting plan-and-solve prompts mainly improve completeness and correctness of reasoning steps.",
+    "gold_chunk_ids": [
+      "2305.04091_18"
+    ],
+    "source_paper": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models",
+    "answerable": true
+  },
+  {
+    "id": "q016",
+    "question": "In the FLARE ablations, how does varying the confidence threshold \u03b8 (i.e., the fraction of sentences triggering retrieval) affect performance differently on 2WikiMultihopQA versus StrategyQA?",
+    "reference_answer": "Sweeping \u03b8 from 0 to 1 changes the proportion of steps where retrieval fires. On 2WikiMultihopQA, EM plateaus once the retrieval percentage exceeds about 60%, showing that retrieving when the LM is already confident adds nothing. On StrategyQA, performance actually drops beyond roughly 50% retrieval, indicating that unnecessary retrieval injects noise and disrupts the original generation process.",
+    "gold_chunk_ids": [
+      "2305.06983_23"
+    ],
+    "source_paper": "Active Retrieval Augmented Generation",
+    "answerable": true
+  },
+  {
+    "id": "q017",
+    "question": "In the Tree of Thoughts Game of 24 experiments, how were the test games selected from 4nums.com, and what exactly counts as a success in the reported metric?",
+    "reference_answer": "The authors scraped 1,362 games from 4nums.com, which are sorted from easy to hard by human solving time, and used the relatively hard subset indexed 901\u20131,000, i.e., 100 games. An output counts as a success only if it is a valid equation equal to 24 that uses each input number exactly once; the reported metric is the success rate across those 100 games.",
+    "gold_chunk_ids": [
+      "2305.10601_14"
+    ],
+    "source_paper": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+    "answerable": true
+  },
+  {
+    "id": "q018",
+    "question": "In the Bing-based retrieval setup for this query rewriting pipeline, what are the two ways retrieved content is turned into documents, and how is document length controlled in the second one?",
+    "reference_answer": "Retrieval with the Bing API is done in two ways: (i) concatenating the snippets (related sentences selected by Bing) from all retrieved web pages, analogous to reading the search results page in a browser; and (ii) requesting the URLs and parsing the pages to obtain their full texts, analogous to clicking on the result items. In the second approach, BM25 is used to keep only the passages with higher relevance scores to the query, which reduces the document length.",
+    "gold_chunk_ids": [
+      "2305.14283_14"
+    ],
+    "source_paper": "Query Rewriting for Retrieval-Augmented Large Language Models",
+    "answerable": true
+  },
+  {
+    "id": "q019",
+    "question": "In the Gorilla evaluation table, what happens to Gorilla's HuggingFace accuracy when a BM-25 retriever is added at test time compared to the zero-shot setting, and how does that compare with GPT-3.5?",
+    "reference_answer": "Gorilla's overall HuggingFace accuracy drops sharply from 71.68% zero-shot to 17.03% with BM-25, with errors rising to 76.55% (hallucination actually falls slightly, from 10.95% to 6.42%). GPT-3.5 also degrades on HuggingFace with BM-25 (16.81% zero-shot to 17.26%, essentially flat, but errors jump from 47.46% to 74.44%). This supports the paper's point that a non-optimal retriever can misguide the model and produce more errors; with the Oracle retriever Gorilla instead reaches 91.26%.",
+    "gold_chunk_ids": [
+      "2305.15334_16"
+    ],
+    "source_paper": "Gorilla: Large Language Model Connected with Massive APIs",
+    "answerable": true
+  },
+  {
+    "id": "q020",
+    "question": "In VOYAGER's iterative prompting mechanism, what specific signals are fed back into GPT-4 for the next round of code refinement, and how does the authors' self-verification differ from prior self-reflection approaches?",
+    "reference_answer": "During each round of code generation, VOYAGER executes the generated program and collects environment feedback plus execution errors from the code interpreter; these are inserted into GPT-4's prompt to guide the next round of code refinement. If a task fails, the self-verification module additionally provides a critique suggesting how to complete the task. The authors claim this is more comprehensive than prior self-reflection work because it both checks task success and reflects on the mistakes made.",
+    "gold_chunk_ids": [
+      "2305.16291_17"
+    ],
+    "source_paper": "VOYAGER: An Open-Ended Embodied Agent with Large Language Models",
+    "answerable": true
+  },
+  {
+    "id": "q021",
+    "question": "In the MT-bench category-wise win rate table, which category shows the largest gap between GPT-4 and Vicuna-13B, and how do reasoning and math win rates compare across GPT-4, GPT-3.5, and Vicuna-13B?",
+    "reference_answer": "Math shows one of the largest gaps: GPT-4 achieves 66.1% versus Vicuna-13B's 18.0% (a ~48-point gap), and STEM/Humanities also show large gaps (76.6% vs 47.0% and 72.2% vs 47.5%). Reasoning is the weakest category for all models: GPT-4 49.3%, GPT-3.5 32.6%, Vicuna-13B 20.1% (and LLaMA-13B 7.8%). GPT-3.5's math win rate (63.8%) is close to GPT-4's, while Vicuna-13B lags far behind in math.",
+    "gold_chunk_ids": [
+      "2306.05685_22"
+    ],
+    "source_paper": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+    "answerable": true
+  },
+  {
+    "id": "q022",
+    "question": "In the key-value retrieval experiments, how does LongChat-13B (16K) deviate from the other models tested, and what qualitative behavior did the authors observe?",
+    "reference_answer": "Unlike GPT-3.5-Turbo, GPT-3.5-Turbo (16K), and MPT-30B-Instruct \u2014 which all show their lowest accuracy when the key to retrieve sits in the middle of the input \u2014 LongChat-13B (16K) shows a different trend in the 140 key-value pair (~8K token) setting. The authors qualitatively observed that when the relevant information appeared in certain positions, LongChat-13B behaved differently from the other models (rather than simply degrading in the middle).",
+    "gold_chunk_ids": [
+      "2307.03172_18"
+    ],
+    "source_paper": "Lost in the Middle: How Language Models Use Long Contexts",
+    "answerable": true
+  },
+  {
+    "id": "q023",
+    "question": "In the survey's comparison table of LLM-based agents, how are the symbols \u2460 and \u2461 interpreted in the 'capability acquisition' (CA) column and what does '-' mean \u2014 and according to that coding, do GITM and Voyager (both 05/2023) acquire capabilities with or without fine-tuning?",
+    "reference_answer": "In the CA column, \u2460 denotes methods that acquire capabilities with fine-tuning, while \u2461 denotes methods that do so without fine-tuning. A '-' entry means the corresponding aspect is not explicitly discussed in that paper. Both GITM and Voyager (05/2023) are marked \u2461 in the CA column, meaning they acquire capabilities without fine-tuning.",
+    "gold_chunk_ids": [
+      "2308.11432_36"
+    ],
+    "source_paper": "A Survey on Large Language Model based Autonomous Agents",
+    "answerable": true
+  },
+  {
+    "id": "q024",
+    "question": "In Ragas, how is the answer relevance score computed, and what aspects of answer quality does it deliberately ignore versus penalise?",
+    "reference_answer": "For answer relevance, the LLM is prompted to generate n potential questions q_i from the given answer a_s(q); each generated question is embedded with OpenAI's text-embedding-ada-002 and compared to the original question q via cosine similarity, with AR being the mean of those n similarities. The metric deliberately ignores factuality (whether the answer is correct), while penalising answers that are incomplete or contain redundant information. It thus measures how closely the answer aligns with the original question or instruction.",
+    "gold_chunk_ids": [
+      "2309.15217_8"
+    ],
+    "source_paper": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+    "answerable": true
+  },
+  {
+    "id": "q025",
+    "question": "In Self-RAG, how does varying the adaptive retrieval threshold \u03b4 affect retrieval frequency and task accuracy, and why do PopQA and PubHealth behave differently?",
+    "reference_answer": "The threshold \u03b4 is applied to the retrieval reward token's probability, with larger \u03b4 producing less frequent retrieval. Varying \u03b4 changes retrieval frequency dramatically on both PubHealth and PopQA, but the accuracy cost of retrieving less is small on PubHealth and much larger on PopQA \u2014 i.e., PopQA depends more heavily on retrieved evidence. This lets practitioners trade efficiency for accuracy at test time without retraining.",
+    "gold_chunk_ids": [
+      "2310.11511_26"
+    ],
+    "source_paper": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "answerable": true
+  },
+  {
+    "id": "q026",
+    "question": "In the ARES paper, how does the framework's ranking accuracy compare to a sampled-annotation baseline, and what annotation budget does each require?",
+    "reference_answer": "The sampled-annotations configuration drew 150 datapoints from each of the nine mock RAG systems, totaling 1,350 annotations. Despite using 78% fewer annotations, ARES achieved a Kendall's tau that was 0.08 higher on average across context relevance and answer relevance. This makes ARES both more data-efficient with human annotations and more accurate at scoring than standard sampled-annotation methods.",
+    "gold_chunk_ids": [
+      "2311.09476_16"
+    ],
+    "source_paper": "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems",
+    "answerable": true
+  },
+  {
+    "id": "q027",
+    "question": "In this RAG survey's taxonomy of retrieval augmentation processes, how do iterative, recursive, and adaptive retrieval differ, and what drawbacks are noted for iterative retrieval?",
+    "reference_answer": "Iterative retrieval alternates repeatedly between retrieval and generation, searching the knowledge base based on the initial query plus the text generated so far to build richer context at each step (e.g., ITER-RETGEN, which combines retrieval-enhanced generation with generation-enhanced retrieval). Recursive retrieval instead gradually refines the user query and decomposes the problem into sub-problems, converging on relevant information through a feedback loop (e.g., IRCoT, which uses chain-of-thought to guide retrieval and refines the CoT with retrieved results). Adaptive retrieval lets the RAG system autonomously decide whether external retrieval is needed and when to stop retrieving/generating, often via LLM-generated special tokens. Iterative retrieval improves robustness of answer generation but can suffer from semantic discontinuity and accumulation of irrelevant information.",
+    "gold_chunk_ids": [
+      "2312.10997_27"
+    ],
+    "source_paper": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "answerable": true
+  },
+  {
+    "id": "q028",
+    "question": "In the CRAG paper's experimental setup, which four datasets were used and what evaluation metric was applied to each?",
+    "reference_answer": "CRAG was evaluated on four datasets: PopQA (short-form generation), Biography (long-form generation), PubHealth (true-or-false questions), and Arc-Challenge (multiple-choice questions). Accuracy was used as the metric for PopQA, PubHealth, and Arc-Challenge, while FactScore (Min et al., 2023) was used for Biography. The authors kept these metrics to remain comparable with prior studies, since they used the same retrieval results as previous work.",
+    "gold_chunk_ids": [
+      "2401.15884_15"
+    ],
+    "source_paper": "Corrective Retrieval Augmented Generation",
+    "answerable": true
+  },
+  {
+    "id": "u001",
+    "question": "What chunk overlap percentage does the RAG survey paper recommend for legal contracts?",
+    "reference_answer": null,
+    "gold_chunk_ids": [],
+    "source_paper": null,
+    "answerable": false
+  },
+  {
+    "id": "u002",
+    "question": "How does the Segment Anything Model (SAM) perform on medical image segmentation benchmarks?",
+    "reference_answer": null,
+    "gold_chunk_ids": [],
+    "source_paper": null,
+    "answerable": false
+  },
+  {
+    "id": "u003",
+    "question": "What was the reported carbon footprint of training GPT-3, according to the papers in this corpus?",
+    "reference_answer": null,
+    "gold_chunk_ids": [],
+    "source_paper": null,
+    "answerable": false
+  },
+  {
+    "id": "u004",
+    "question": "What programming language is Toolformer's tool-calling API implemented in?",
+    "reference_answer": null,
+    "gold_chunk_ids": [],
+    "source_paper": null,
+    "answerable": false
+  },
+  {
+    "id": "u005",
+    "question": "What GPU cluster configuration was used to train the underlying model behind Reflexion?",
+    "reference_answer": null,
+    "gold_chunk_ids": [],
+    "source_paper": null,
+    "answerable": false
+  }
+]
